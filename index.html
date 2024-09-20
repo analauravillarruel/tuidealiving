@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tu idea Living Tus muebles a medida">
+  <title>Tu Idea Living</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="img/logo/logo-tu-idea-living-blanco-circular-fondo.png">
+ 
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/mediaQueries.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>  
+
+</head>
+<body>
+    <header class="cabecera">        
+        <nav class="nav-home">     
+            <div class="nav-menu nav"> <!-- menú de navegación -->  
+                <ul>
+                    <li><a href="./pages/nosotros.html">Nosotros</a></li>
+                    <li><a href="./pages/servicios.html">Servicios</a></li>
+                    <li><a href="./pages/podructos.html">Productos</a></li>
+                    <li><a href="./pages/contacto.html">Contacto</a></li>
+                    <li><a href="">Blog</a></li>
+                </ul>
+            </div>   
+        </nav><!-- FIN nav -->
+    </header>
+    <main class="container">
+        <section class="section-1 fondo-color"> <!-- Cuadro Color Sólido -->
+            <div class="logo"> <!-- logo-inicio -->
+                <h1>              
+                    <a href="./index.html">
+                        <img src="./img/logo/logo-tu-idea-living-con-lineas.png" alt="Tu Idea Living - tus muebles a medida" title="Tu Idea Living - tus muebles a medida">
+                    </a>
+                </h1>
+            </div> 
+            <div class="text-home">
+                <h2>
+                    <p>Diseñanos tus muebles a medida.</p> 
+                    <p>Especializados en sillones y sofás</p>                
+                </h2>
+            </div>
+            <div class="redes"> <!-- cambiar icono gmail -->
+                <a href="https://www.instagram.com/tu.idea.living/?hl=es" target="_blank"> <i class='bx bxl-instagram' ></i></a>
+                <a href="https://www.facebook.com/" target="_blank"><i class='bx bxl-meta'></i></a>
+                <a href="https://www.google.com/intl/es/gmail/about/#" target="_blank"><i class='bx bx-envelope' ></i></a>
+                <a href="https://api.whatsapp.com/send?phone=5492612585773" target="_blank"> <i class='bx bxl-whatsapp'></i> </a>
+            </div>       
+        </section>
+        <section class="section-2">
+            <div class="slider">
+                <div class="slides">
+                    <img src="./img/home/sillon-0.png" alt="Imagen 1">
+                    <img src="./img/home/sillon-1.png" alt="Imagen 2">
+                    <img src="./img/home/sillon-5.png" alt="Imagen 3">
+                </div>
+            </div>
+        </section> 
+    </main>
+
+    <script>
+        let currentIndex = 0;
+        const slides = document.querySelector('.slides');
+        const totalSlides = document.querySelectorAll('.slides img').length;
+
+        function showNextSlide() {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        setInterval(showNextSlide, 5000);
+    </script>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> -->
+
+</body>
+</html>
